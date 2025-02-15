@@ -1,0 +1,32 @@
+.nav-links-container-menu {
+    display: none;
+    top: 0;
+    width: 50%;
+    position: fixed;
+    list-style-type: none;
+    height: 100vh;
+    transition: left 0.3s ease;
+    background-color: white;
+}
+
+.nav-links-container-menu.open {
+    left: 0px;
+    opacity: 1;
+}
+
+.nav-links-container-menu li {
+    margin: 20px;
+}
+
+.nav-links-container-menu a {
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0px;
+}
+
+@media screen and (max-width: 990px) {
+    .nav-links-container-menu {
+        display: inline;
+    }
+}

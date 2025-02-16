@@ -2,3 +2,31 @@
   margin: 0;
   padding: 0;
 }
+
+.App {
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  max-width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  padding: 50px;
+  gap: 100px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 990px) {
+  .main {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0;
+    gap: 0;
+  }
+}

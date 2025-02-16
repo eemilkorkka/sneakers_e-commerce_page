@@ -1,7 +1,8 @@
 .nav-links-container-menu {
     display: none;
     top: 0;
-    width: 50%;
+    width: 65%;
+    max-width: 300px;
     position: fixed;
     list-style-type: none;
     height: 100vh;

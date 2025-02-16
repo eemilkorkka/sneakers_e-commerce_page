@@ -1,0 +1,34 @@
+.product-picture-container {
+    flex: 1;
+}
+
+.big-picture img {
+    width: 100%;
+    height: 50%;
+    border-radius: 15px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thumbnail-active {
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
+.thumbnail-active, .thumbnail {
+    width: calc(25% - 30px);
+    margin-top: 30px;
+    border-radius: 15%;
+}
+
+@media screen and (max-width: 990px) {
+    .big-picture img {
+        border-radius: 0;
+    }
+
+    .thumbnails {
+        display: none;
+    }
+}

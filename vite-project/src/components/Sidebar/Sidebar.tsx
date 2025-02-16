@@ -1,15 +1,15 @@
 import "./Sidebar.css";
-import close from "../../../public/icon-close.svg";
+import close from "../../images/icon-close.svg";
 
 interface SidebarProps {
-    menuIsOpen: boolean
+    menuIsOpen: boolean;
     toggleMenu: () => void; 
 }
 
 const Sidebar = ({ menuIsOpen, toggleMenu }: SidebarProps) => {
     return (
         <>
-            <ul className="nav-links-container-menu" style={{ left: menuIsOpen ? 0 : "-50%"}}>
+            <ul className="nav-links-container-menu" style={{ left: menuIsOpen ? 0 : "-100%"}}>
                 <img src={close} alt="close" className="menu-close" onClick={toggleMenu} />
                 <li><a href="#">Collections</a></li>
                 <li><a href="#">Men</a></li>

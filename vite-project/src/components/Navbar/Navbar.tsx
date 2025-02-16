@@ -1,7 +1,7 @@
-import logo from "../../../public/logo.svg";
-import cart from "../../../public/icon-cart.svg";
-import avatar from "../../../public/image-avatar.png";
-import menu from "../../../public/icon-menu.svg";
+import logo from "../../images/logo.svg";
+import cart from "../../images//icon-cart.svg";
+import avatar from "../../images/image-avatar.png";
+import menu from "../../images/icon-menu.svg";
 import "./Navbar.css";
 import { useCallback, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";

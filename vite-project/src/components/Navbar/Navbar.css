@@ -1,5 +1,5 @@
 header {
-    max-width: 80%;
+    padding-inline: 10%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -92,14 +92,6 @@ header {
 
     .logo {
         margin-left: 20px;
-    }
-
-    header {
-        max-width: 100%;
-    }
-
-    .navbar {
-        padding-inline: 15px;
     }
 
     .right-side {

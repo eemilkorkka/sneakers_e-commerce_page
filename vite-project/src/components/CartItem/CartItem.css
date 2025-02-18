@@ -1,0 +1,23 @@
+.cart-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail-icon {
+    height: 55px;
+    border-radius: 5px;
+}
+
+.delete-icon {
+    height: 15px;
+    margin-top: 15px;
+}
+
+.cart-product-details span {
+    color: hsl(219, 9%, 45%);
+}

@@ -1,0 +1,28 @@
+.counter-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 10px;
+    flex: 0.4;
+}
+
+.counter-button-container span {
+    font-weight: 700;
+    color: hsl(220, 13%, 13%);
+}
+
+.counter-button-container button {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: hsl(223, 64%, 98%);
+}
+
+.counter-button-container button:hover {
+    cursor: pointer;
+}

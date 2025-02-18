@@ -17,17 +17,16 @@
 .paragraph {
     font-size: 16px; 
     color: hsl(219, 9%, 45%); 
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .price {
     display: flex;
-    align-items: center;
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
-.price div {
+.discount-container {
     padding: 5px 15px;
     background-color: hsl(220, 13%, 13%);
     border-radius: 8px;
@@ -37,29 +36,23 @@
     color: white;
 }
 
+.old-price-container {
+    color: hsl(219, 9%, 45%);
+    font-weight: 700;
+    margin-top: 20px;
+    text-decoration: line-through;
+}
+
 .buttons {
     display: flex;
-    margin-top: 30px;
+    margin-top: 25px;
+    gap: 20px;
 }
 
-.amount-button {
-    background-color: hsl(223, 64%, 98%);
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.amount-button span {
-    font-weight: 700;
-}
-
-.amount-button button {
-    background-color: hsl(223, 64%, 98%);
-    padding: 20px;
-    border: none;
-}
-
-.amount-button span {
-    margin: 35px;
+@media screen and (max-width: 550px) {
+    .buttons {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 389px) {

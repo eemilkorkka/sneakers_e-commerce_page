@@ -1,14 +1,16 @@
 import logo from "../../images/logo.svg";
-import cart from "../../images//icon-cart.svg";
 import avatar from "../../images/image-avatar.png";
 import menu from "../../images/icon-menu.svg";
 import "./Navbar.css";
 import { useCallback, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
+import CartIcon from "../CartIcon/CartIcon";
+import Cart from "../Cart/Cart";
 
 const Navbar = () => {
 
     const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
+    const [cartOpen, setCartOpen] = useState<boolean>(false);
 
     const toggleMenu = useCallback(() => {
         setMenuIsOpen(prev => !prev);
@@ -32,14 +34,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="right-side">
-                    <div className="cart-container">
-                        <img src={cart} alt="cart icon" />
+                    <div className="cart-icon-container" onClick={() => setCartOpen(prev => !prev)}>
+                        <CartIcon fill="hsl(219, 9%, 45%)" />
                     </div>
                     <div className="avatar-container">
                         <img src={avatar} alt="avatar" />
                     </div>
                 </div>
             </nav>
+            <Cart cartOpen={cartOpen} />
         </header>
     )
 }

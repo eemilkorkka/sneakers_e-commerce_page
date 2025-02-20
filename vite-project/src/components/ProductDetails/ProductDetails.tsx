@@ -1,13 +1,12 @@
-import { useContext } from "react";
+import { useState } from "react";
 import "./ProductDetails.css";
 import CounterButton from "../CounterButton/CounterButton";
 import CartButton from "../CartButton/CartButton";
-import { CartContext } from "../../contexts/CartContex";
+
 const ProductDetails = () => {
 
-    const context = useContext(CartContext);
-
-    const price = context?.price ?? 125;
+    const [amount, setAmount] = useState<number>(0);
+    const [price, setPrice] = useState<number>(125);
 
     return (
         <div className="product-details">
@@ -34,8 +33,8 @@ const ProductDetails = () => {
                 </div>
             </div>
             <div className="buttons">
-                <CounterButton />
-                <CartButton />
+                <CounterButton amount={amount} setAmount={setAmount} price={price} setPrice={setPrice} />
+                <CartButton amount={amount} price={price} />
             </div>
         </div>
     )

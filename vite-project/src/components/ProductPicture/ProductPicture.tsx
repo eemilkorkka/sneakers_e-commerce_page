@@ -35,13 +35,13 @@ const ProductPicture = () => {
             <div className="thumbnails">
                 {productThumbnails.map((productThumbnail, index) => {
                     return (
-                        <img 
-                            src={productThumbnail} 
-                            alt="product image" 
-                            className={currentIndex === index ? "thumbnail-active" : "thumbnail"}
-                            style={{opacity: currentIndex === index ? "50%" : "1"}} 
-                            onClick={() => setCurrentIndex(index)} 
-                        />
+                        <div className={currentIndex === index ? "thumbnail-active" : "thumbnail"}>
+                            <img 
+                                src={productThumbnail}
+                                style={{width: "100%"}}
+                                onClick={() => setCurrentIndex(index)}
+                            />
+                        </div>
                     )
                 })}
             </div>  

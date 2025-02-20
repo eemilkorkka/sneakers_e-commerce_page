@@ -1,17 +1,16 @@
 import "./CounterButton.css";
 import plusIcon from "../../images/icon-plus.svg";
 import minusIcon from "../../images/icon-minus.svg";
-import { useContext } from "react";
-import { CartContext } from "../../contexts/CartContex";
+import { Dispatch, SetStateAction } from "react";
 
-const CounterButton = () => {
+interface CounterButtonProps {
+    amount: number;
+    setAmount: Dispatch<SetStateAction<number>>;
+    price: number;
+    setPrice: Dispatch<SetStateAction<number>>;
+}
 
-    const context = useContext(CartContext);
-
-    const amount = context?.amount ?? 0;
-    const setAmount = context?.setAmount ?? (() => {});
-    const price = context?.price ?? 125;
-    const setPrice = context?.setPrice ?? (() => {});
+const CounterButton = ({ amount, setAmount, price, setPrice }: CounterButtonProps) => {
 
     const handleButtonClick = (type: string) => {
 

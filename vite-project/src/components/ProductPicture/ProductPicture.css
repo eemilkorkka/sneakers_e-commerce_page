@@ -13,16 +13,22 @@
 .thumbnails {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.thumbnail img {
+    border-radius: 10px;
+}
+
+.thumbnail-active img {
+    opacity: 40%;
+    display: block;
 }
 
 .thumbnail-active {
     border: 2px solid hsl(26, 100%, 55%);
-}
-
-.thumbnail-active, .thumbnail {
-    width: calc(25% - 30px);
-    margin-top: 30px;
-    border-radius: 15%;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 990px) {

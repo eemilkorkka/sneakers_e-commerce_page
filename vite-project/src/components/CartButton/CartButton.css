@@ -1,5 +1,5 @@
 .cart-button-container {
-    flex: 0.9;
+    width: 230px;
 }
 
 .cart-button-container button {
@@ -23,4 +23,10 @@
 
 .cart-button-container button:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 990px) {
+    .cart-button-container {
+        width: 100%;
+    }
 }

@@ -10,15 +10,13 @@ interface CartProps {
 const Cart = ({ cartOpen }: CartProps) => {
     const context = useContext(CartContext);
 
-    const isCartEmpty = context?.isCartEmpty ?? true;
-
     if (!cartOpen) return null;
 
     return (
         <div className="cart-container">
             <h4 style={{ padding: "20px" }}>Cart</h4>
             <div style={{ padding: "20px", borderTop: "1px solid rgb(234, 234, 234)" }}>
-                {isCartEmpty ? (
+                {context?.isCartEmpty ? (
                     <span>Your cart is empty.</span>
                 ) : (
                     <>

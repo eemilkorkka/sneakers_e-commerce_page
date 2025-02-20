@@ -3,17 +3,20 @@ import CartIcon from "../CartIcon/CartIcon";
 import "./CartButton.css";
 import { CartContext } from "../../contexts/CartContex";
 
-const CartButton = () => {
+interface CartButtonProps {
+    amount: number;
+    price: number;
+}
+
+const CartButton = ({ amount, price }: CartButtonProps) => {
 
     const context = useContext(CartContext);
 
-    const amount = context?.amount ?? 0;
-    const isCartEmpty = context?.isCartEmpty ?? true;
-    const setCartEmpty = context?.setCartEmpty ?? (() => {});
-
     const handleAddToCard = () => {
-        if (amount > 0 && isCartEmpty) {
-            setCartEmpty(false);
+        if (amount > 0) {
+            context?.setCartEmpty(false);
+            context?.setAmount(amount);
+            context?.setPrice(price);
         }
     }
 

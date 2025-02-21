@@ -1,7 +1,7 @@
 .product-details {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 100px;
 }
 
 .product-details-top h1 {
@@ -47,6 +47,12 @@
     display: flex;
     margin-top: 25px;
     gap: 20px;
+}
+
+@media screen and (max-width: 990px) {
+    .product-details {
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 550px) {

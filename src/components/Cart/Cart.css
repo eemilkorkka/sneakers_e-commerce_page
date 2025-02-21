@@ -36,3 +36,11 @@
         z-index: 1;
     }
 }
+
+@media screen and (max-width: 550px) {
+    .cart-container {
+        left: 50%;
+        top: 190px;
+        transform: translate(-50%, -50%); 
+    }
+}

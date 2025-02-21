@@ -8,7 +8,7 @@ A single page e-commerce website made with React ⚛️ This project idea is fro
 ## Screenshots 📸
 
 Desktop view
-![Desktop view](https://github.com/eemilkorkka/sneakers_e-commerce_page/tree/main/public/screenshots/localhost_5173_.png)
+![Desktop view](https://github.com/eemilkorkka/sneakers_e-commerce_page/blob/main/public/screenshots/localhost_5173_.png?raw=true)
 
 Mobile view
-![Mobile view](https://github.com/eemilkorkka/sneakers_e-commerce_page/tree/main/public/screenshots/localhost_5173_(iPhone 12 Pro).png)
+![Mobile view](https://github.com/eemilkorkka/sneakers_e-commerce_page/blob/main/public/screenshots/localhost_5173_(iPhone%2012%20Pro).png?raw=true)

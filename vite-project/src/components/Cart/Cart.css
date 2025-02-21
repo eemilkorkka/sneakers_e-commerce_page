@@ -1,4 +1,6 @@
 .cart-container {
+    width: 350px;
+    height: 225px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -7,7 +9,16 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     top: 80px;
     right: 6%;
-    z-index: 1;
+}
+
+.cart-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-top: 1px solid rgb(234, 234, 234);
+    height: 225px;
 }
 
 .checkout-button {

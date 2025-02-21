@@ -33,7 +33,7 @@ const ProductPictureView = ({ productPictures, setProductPictureViewOpen }: Prod
                 setCurrentIndex={setCurrentIndex} 
                 style={{left: "-25px"}} />
             </div>
-            <ThumbnailRow currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} style={{width: "100px"}} />
+            <ThumbnailRow currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} style={{width: "100px", height: "100%"}} />
         </div>
     )
 }

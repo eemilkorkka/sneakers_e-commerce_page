@@ -18,6 +18,10 @@
     margin-top: 15px;
 }
 
+.delete-icon:hover {
+    cursor: pointer;
+}
+
 .cart-product-details span {
     color: hsl(219, 9%, 45%);
 }

@@ -1,3 +1,21 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 14, 14, 0.78);
+    visibility: hidden; 
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+    z-index: 1; 
+}
+
+.overlay-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
 .nav-links-container-menu {
     display: none;
     top: 0;
@@ -8,6 +26,7 @@
     height: 100vh;
     transition: left 0.3s ease;
     background-color: white;
+    z-index: 1;
 }
 
 .nav-links-container-menu.open {

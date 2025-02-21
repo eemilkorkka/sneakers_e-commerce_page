@@ -9,6 +9,12 @@ interface SidebarProps {
 const Sidebar = ({ menuIsOpen, toggleMenu }: SidebarProps) => {
     return (
         <>
+
+            <div
+                className={`overlay ${menuIsOpen ? "overlay-visible" : ""}`}
+                onClick={toggleMenu}
+            ></div>
+    
             <ul className="nav-links-container-menu" style={{ left: menuIsOpen ? 0 : "-100%"}}>
                 <img src={close} alt="close" className="menu-close" onClick={toggleMenu} />
                 <li><a href="#">Collections</a></li>

@@ -2,15 +2,22 @@
     import avatar from "../../images/image-avatar.png";
     import menu from "../../images/icon-menu.svg";
     import "./Navbar.css";
-    import { useCallback, useState } from "react";
+    import { useCallback, useContext, useState } from "react";
     import Sidebar from "../Sidebar/Sidebar";
     import CartIcon from "../Icons/CartIcon/CartIcon";
     import Cart from "../Cart/Cart";
+import { CartContext } from "../../contexts/CartContex";
 
     const Navbar = () => {
 
         const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
         const [cartOpen, setCartOpen] = useState<boolean>(false);
+        const [fill, setFill] = useState<string>("");
+
+        const context = useContext(CartContext);
+
+        const amount = context?.amount;
+        const isCartEmpty = context?.isCartEmpty;
 
         const toggleMenu = useCallback(() => {
             setMenuIsOpen(prev => !prev);
@@ -34,8 +41,17 @@
                         </ul>
                     </div>
                     <div className="right-side">
-                        <div className="cart-icon-container" onClick={() => setCartOpen(prev => !prev)}>
-                            <CartIcon fill="hsl(219, 9%, 45%)" />
+                        <div 
+                            className="cart-icon-container" 
+                            onClick={() => setCartOpen(prev => !prev)} 
+                            onMouseEnter={() => setFill("hsl(220, 13%, 13%)")}
+                            onMouseLeave={() => setFill("hsl(219, 9%, 45%)")}>
+                                {!isCartEmpty && 
+                                    <div className="cart-indicator">
+                                        <span>{amount}</span>
+                                    </div>
+                                }
+                                <CartIcon fill={fill} />
                         </div>
                         <div className="avatar-container">
                             <img src={avatar} alt="avatar" />

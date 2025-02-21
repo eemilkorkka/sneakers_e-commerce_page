@@ -95,6 +95,33 @@ header {
     cursor: pointer;
 }
 
+.cart-icon-container {
+    position: relative;
+}
+
+.cart-indicator {
+    display: flex;
+    position: absolute;
+    right: -12px;
+    top: -10px;
+    background-color: hsl(26, 100%, 55%);
+    width: 25px;
+    height: 15px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-icon-container:hover {
+    cursor: pointer;
+}
+
+.cart-indicator span {
+    font-size: 12px;
+    color: white;
+    font-weight: 700;
+}
+
 @media screen and (max-width: 990px) {
 
     .nav-links-container a {

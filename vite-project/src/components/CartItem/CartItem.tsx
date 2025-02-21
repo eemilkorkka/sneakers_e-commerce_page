@@ -18,7 +18,7 @@ const CartItem = () => {
                 <span>Fall Limited Edition Sneakers</span>
                 <span>$125.00 x {amount} <span style={{fontWeight: 700, color: "hsl(220, 13%, 13%)"}}>${price}.00</span></span>
             </div>
-            <img src={deleteIcon} className="delete-icon" />
+            <img src={deleteIcon} className="delete-icon" onClick={() => context?.setCartEmpty(true)} />
         </div>
     )
 }

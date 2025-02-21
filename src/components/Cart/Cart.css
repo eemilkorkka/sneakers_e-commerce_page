@@ -30,3 +30,9 @@
     background-color: hsl(26, 100%, 55%);
     font-weight: 700;
 }
+
+@media screen and (max-width: 990px) {
+    .cart-container {
+        z-index: 1;
+    }
+}

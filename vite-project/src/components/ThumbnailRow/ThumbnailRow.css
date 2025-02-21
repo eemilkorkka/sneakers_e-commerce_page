@@ -1,0 +1,38 @@
+.thumbnails {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.thumbnail img, .thumbnail-active img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.thumbnail img:hover, .thumbnail-active img:hover {
+    cursor: pointer;
+}
+
+.thumbnail-active, .thumbnail {
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 10px;
+    height: 100%;
+}
+
+.thumbnail-active img {
+    opacity: 40%;
+}
+
+.thumbnail-active {
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 990px) {
+
+    .thumbnails {
+        display: none;
+    }
+}

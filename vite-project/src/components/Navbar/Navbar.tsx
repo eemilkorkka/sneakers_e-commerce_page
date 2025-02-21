@@ -4,7 +4,7 @@
     import "./Navbar.css";
     import { useCallback, useState } from "react";
     import Sidebar from "../Sidebar/Sidebar";
-    import CartIcon from "../CartIcon/CartIcon";
+    import CartIcon from "../Icons/CartIcon/CartIcon";
     import Cart from "../Cart/Cart";
 
     const Navbar = () => {

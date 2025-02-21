@@ -3,6 +3,10 @@
     flex: 1;
 }
 
+.big-picture {
+    position: relative;
+}
+
 .big-picture img {
     object-fit: cover;
     width: 100%;
@@ -10,34 +14,13 @@
     border-radius: 15px;
 }
 
-.thumbnails {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 25px;
-}
-
-.thumbnail img {
-    border-radius: 10px;
-}
-
-.thumbnail-active img {
-    opacity: 40%;
-    display: block;
-}
-
-.thumbnail-active {
-    border: 2px solid hsl(26, 100%, 55%);
-    border-radius: 10px;
+.big-picture img:hover {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 990px) {
     .big-picture img {
         max-height: 350px;
         border-radius: 0;
-    }
-
-    .thumbnails {
-        display: none;
     }
 }

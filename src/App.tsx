@@ -14,12 +14,12 @@ function App() {
 
   const [productPictureViewOpen, setProductPictureViewOpen] = useState<boolean>(false);
 
-  const productPictures = [
+  const productPictures: string[] = [
     image1,
     image2,
     image3,
     image4
-  ]
+  ];
 
   return (
     <div className="App">

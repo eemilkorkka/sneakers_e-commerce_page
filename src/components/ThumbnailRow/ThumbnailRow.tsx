@@ -13,12 +13,12 @@ interface ThumbnailRowProps {
 
 const ThumbnailRow = ({ currentIndex, setCurrentIndex, style }: ThumbnailRowProps) => {
 
-    const productThumbnails = [
+    const productThumbnails: string[] = [
         thumbnail1,
         thumbnail2,
         thumbnail3,
         thumbnail4
-    ]
+    ];
 
     return (
         <div className="thumbnails">

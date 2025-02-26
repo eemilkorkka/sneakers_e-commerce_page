@@ -7,9 +7,11 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ menuIsOpen, toggleMenu }: SidebarProps) => {
+
+    const menuItems = ["Collections", "Men", "Women", "About", "Contact"];
+
     return (
         <>
-
             <div
                 className={`overlay ${menuIsOpen ? "overlay-visible" : ""}`}
                 onClick={toggleMenu}
@@ -17,11 +19,11 @@ const Sidebar = ({ menuIsOpen, toggleMenu }: SidebarProps) => {
     
             <ul className="nav-links-container-menu" style={{ left: menuIsOpen ? 0 : "-100%"}}>
                 <img src={close} alt="close" className="menu-close" onClick={toggleMenu} />
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                {menuItems.map((item) => {
+                    return (
+                        <li><a href="#">{item}</a></li>
+                    )
+                })}
             </ul>
         </>
     )

@@ -19,6 +19,8 @@ import { CartContext } from "../../contexts/CartContex";
         const amount = context?.amount;
         const isCartEmpty = context?.isCartEmpty;
 
+        const navItems: string[] = ["Collections", "Men", "Women", "About", "Contact"];   
+
         const toggleMenu = useCallback(() => {
             setMenuIsOpen(prev => !prev);
         }, [])
@@ -33,11 +35,11 @@ import { CartContext } from "../../contexts/CartContex";
                         </div>                 
                         <Sidebar menuIsOpen={menuIsOpen} toggleMenu={toggleMenu} />
                         <ul className="nav-links-container" >
-                            <li><a href="#">Collections</a></li>
-                            <li><a href="#">Men</a></li>
-                            <li><a href="#">Women</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            {navItems.map((item) => {
+                                return (
+                                    <li><a href="#">{item}</a></li>
+                                )
+                            })}
                         </ul>
                     </div>
                     <div className="right-side">

@@ -7,10 +7,9 @@
   display: flex;
   max-width: 70%;
   margin: auto;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 4%;
-  height: 70%;
 }
 
 .mask {
